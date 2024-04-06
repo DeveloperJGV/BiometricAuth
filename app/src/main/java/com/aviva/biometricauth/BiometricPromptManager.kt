@@ -16,7 +16,7 @@ class BiometricPromptManager(
 ) {
 
     private val resultChanel = Channel<BiometricResult>()
-    val result = resultChanel.receiveAsFlow()
+    val promptResult = resultChanel.receiveAsFlow()
 
     fun showBiometricPrompt(
         title: String,
